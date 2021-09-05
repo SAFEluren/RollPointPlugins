@@ -1,0 +1,10 @@
+name: RollPoint
+version: ${project.version}
+main: safeluren.mcpl.roll.main
+prefix:  Roll
+load: STARTUP
+authors: [ SAFEluren ]
+description: roll点插件
+commands:
+  roll:
+    description: roll一次点。
