@@ -6,12 +6,12 @@
 
     <groupId>SAFEluren.mcp</groupId>
     <artifactId>roll</artifactId>
-    <version>1.0-ALPHA</version>
+    <version>R1.0</version>
     <packaging>jar</packaging>
 
-    <name>Roll</name>
+    <name>RollPoint</name>
 
-    <description>roll点插件</description>
+    <description>Roll点插件</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
