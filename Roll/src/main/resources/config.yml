@@ -1,7 +1,0 @@
-#Language file for Chinese
-
-plugins_prefix: '§e[Roll点]'
-
-roll_okay: '§aRoll点完毕:'
-roll_error: '§c正确用法:/roll [最大点数] 从1开始'
-roll_only_player: '§c命令仅限玩家'
