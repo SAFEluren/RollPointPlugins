@@ -5,7 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import safeluren.mcpl.roll.Utils.Chat;
+import safeluren.mcpl.roll.Utils.color;
 import safeluren.mcpl.roll.main;
 
 import java.util.Random;
@@ -28,16 +28,16 @@ public class roll_swichtest implements CommandExecutor {
                     int i_num = Integer.parseInt(i_str); // 转化整数
                     if (i_num > 0 & i_num < 214748367) { // 输入数字是否大于等于int上限
                         int num = r.nextInt(i_num) + 1; // 随机一个 1 - i_num的数字
-                        sender.sendMessage(Chat.format(prefix+okay + num)); // 随机完了 发消息
+                        sender.sendMessage(color.format(prefix+okay + num)); // 随机完了 发消息
                     } else {
-                        sender.sendMessage(Chat.format(String.format("%s",prefix+error))); // 发给玩家错误消息
+                        sender.sendMessage(color.format(String.format("%s",prefix+error))); // 发给玩家错误消息
                     }
                     return true;
                 }
             }
-            sender.sendMessage(Chat.format(String.format("%s",prefix+error))); // 错误消息 : 非纯数字
+            sender.sendMessage(color.format(String.format("%s",prefix+error))); // 错误消息 : 非纯数字
         } else {
-            System.out.println(Chat.format(prefix + tips_op)); //后台执行提醒仅玩家可用
+            System.out.println(color.format(prefix + tips_op)); //后台执行提醒仅玩家可用
         }
         return true;
     }

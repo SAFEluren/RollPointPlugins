@@ -1,8 +1,8 @@
 package safeluren.mcpl.roll.Utils;
 
-public class Chat {
+public class color {
 
     public static String format(String text) {
-        return (String) text.replaceAll("&","§");
+        return text.replaceAll("&","§");
     }
 }
