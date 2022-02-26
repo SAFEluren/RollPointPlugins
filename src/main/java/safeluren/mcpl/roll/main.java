@@ -1,8 +1,7 @@
 package safeluren.mcpl.roll;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import safeluren.mcpl.roll.command.roll;
-import safeluren.mcpl.roll.command.roll_swichtest;
+import safeluren.mcpl.roll.Command.roll;
 
 public final class main extends JavaPlugin {
 
@@ -17,7 +16,7 @@ public final class main extends JavaPlugin {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
-        getCommand("roll").setExecutor(new roll_swichtest());
+        getCommand("roll").setExecutor(new roll());
     }
 
     @Override
