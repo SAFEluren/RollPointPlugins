@@ -8,6 +8,7 @@ import org.bukkit.plugin.Plugin;
 import safeluren.mcpl.roll.Utils.color;
 import safeluren.mcpl.roll.main;
 
+import java.io.Console;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -18,6 +19,7 @@ public class roll implements CommandExecutor {
     String okay = plugin.getConfig().getString("roll_okay"); //完成的消息
     String error = plugin.getConfig().getString("roll_error"); //错误消息
     String tips_op = plugin.getConfig().getString("roll_only_player");  //仅玩家提醒
+    int max = plugin.getConfig().getInt("max");  //仅玩家提醒
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) { // 命令部分
         Random r = new Random(); // random的包重命名为r
@@ -26,7 +28,7 @@ public class roll implements CommandExecutor {
                 String i_str = args[0];
                 if (judgeAllNum(i_str)) {
                     int i_num = Integer.parseInt(i_str); // 转化整数
-                    if (i_num > 0 & i_num < 214748367) { // 输入数字是否大于等于int上限
+                    if (i_num > 0 & i_num < max) { // 输入数字是否大于等于上限
                         int num = r.nextInt(i_num) + 1; // 随机一个 1 - i_num的数字
                         sender.sendMessage(color.format(prefix+okay + num)); // 随机完了 发消息
                     } else {
